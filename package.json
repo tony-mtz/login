@@ -1,0 +1,46 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "login app with db connection",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony-mtz/login.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "express",
+    "postgresql"
+  ],
+  "author": "Anthony Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tony-mtz/login/issues"
+  },
+  "homepage": "https://github.com/tony-mtz/login#readme",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.3.1",
+    "webpack": "^4.45.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^1.18.9",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
