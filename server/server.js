@@ -18,10 +18,6 @@ app.use(cookieParser());
  */
 app.use(express.static(path.resolve(__dirname, '../client')));
 
-// app.get('/', (req, res)=>{
-//     res.header('content-type', 'text/html; charset=utf-8')
-//     return res.status(200).sendFile(path.resolve(__dirname,'../client/index.html'))
-//   });
 
 /**
  * define route handlers
