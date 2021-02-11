@@ -17,7 +17,7 @@ app.use(cookieParser());
 /**
  * handle static files
  */
-app.use(express.static(path.resolve(__dirname, '../client')));
+app.use(express.static(path.resolve(__dirname, '../build')));
 
 
 /**

@@ -10,6 +10,7 @@ class App extends Component {
     return(
       <div>
         {/* <MainContainer/> */}
+        HELLO FROM MAIN CONTAINER!!
       </div>
     );
   }
