@@ -26,7 +26,7 @@ const LoginForm = (props) => {
                         
                         
                     }}
-                    >{newEmail,newPwd}</button>
+                    >{newEmail,newPwd}Submit</button>
                     <div>{props.newEmail}</div>
 
             </form>
