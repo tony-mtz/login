@@ -2,7 +2,6 @@ const bcrypt = require('bcryptjs')
 
 const db = require('../../model/userModel');
 
-
 const userController = {};
 
 userController.getAll = (req, res, next) =>{
@@ -53,7 +52,7 @@ userController.signup = (req, res, next) =>{
             console.log('inserting query: , ', dbResult);
             return next();
         })
-        .catch(e=>{
+        .catch(e =>{
             /*
             todo: if duplicate email address then send email taken 
                   login instead or use diff email address
@@ -66,20 +65,6 @@ userController.signup = (req, res, next) =>{
           console.log('error in bcrypt: ', err);
           return next(err)
       });
-
-
-    
-    
-
-    // db.query(insertNewUser)
-    //     .then(data =>{
-    //         console.log('get all query response ', data.rows);
-    //         return next();
-    //     })
-    //     .catch(e => {
-    //         console.error(e.stack);
-    //         return next(e);
-    //     })
 }
 
 userController.login = (req, res, next) =>{    
@@ -93,22 +78,21 @@ userController.login = (req, res, next) =>{
           bcrypt.compare(pwd, result.rows[0].pwd)
             .then(bcryptRes =>{
                 console.log('login compare: ', bcryptRes)
-                return next();
+                if(bcryptRes){
+                    return next()
+                }else{
+                    throw "Wrong email or password!"
+                }                
             })
             .catch(e => {
                         console.error('login error: ', e);
                         return next(e);
-                    })        
+            });
       })    
       .catch(err =>{
           console.log('error in login query: ', err);
           return next(err)
       });
-
-
-    
-    
-
-
 }
-module.exports = userController;///
+
+module.exports = userController;
