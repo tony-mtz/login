@@ -8,7 +8,8 @@ import LoginForm from '../components/login';
 
 const mapStateToProps = (state)=>({
     newEmail: state.newEmail,
-    newPwd: state.newPwd
+    newPwd: state.newPwd,
+    
 });
 
 const mapDispatchToProps = (dispatch) => ({

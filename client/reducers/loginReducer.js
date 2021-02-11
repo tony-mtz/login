@@ -19,9 +19,7 @@ const loginReducer = (state = initialState, action) => {
             newEmail = state.newEmail;
             newPwd = state.newPwd;
 
-            const userInfo = { email: newEmail, pwd: newPwd};
-
-            
+            const userInfo = { email: newEmail, pwd: newPwd};            
 
             if(newEmail ==='' || newPwd === ''){
                 return {...state}
@@ -30,8 +28,7 @@ const loginReducer = (state = initialState, action) => {
             
                 return {
                     ...state,
-                    userInput,
-                
+                    userInput,                
                 };
             }
         };
@@ -45,6 +42,7 @@ const loginReducer = (state = initialState, action) => {
             newPwd = action.payload;
             return {...state, newPwd}
         }
+        
         default: 
             return state;
     }

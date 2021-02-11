@@ -22,9 +22,7 @@ const LoginForm = (props) => {
                 <button
                     onClick={(e)=>{
                         validateUser();
-                        e.preventDefault();
-                        
-                        
+                        e.preventDefault();                  
                     }}
                     >{newEmail,newPwd}Submit</button>
                     <div>{props.newEmail}</div>
